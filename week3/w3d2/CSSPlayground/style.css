@@ -1,0 +1,21 @@
+.blue {
+  background-color: blue;
+  border: 
+  border-color: red;
+}
+#red {
+  background-color: red;
+}
+#top {
+  position: absolute;
+  top: 350px;
+  left: 350px;
+}
+#bottom {
+  position: absolute;
+  top: 400px;
+  left: 500px;
+}
+box {
+  margin: 10px;
+}

@@ -1,0 +1,10 @@
+<h1> The posts are </h1>
+<body>
+<% @blogpost.each_with_index{ |each_blog,index| %>
+<p>Title: <b><a href="/post_details/<%= index %>"><%= each_blog.title %></a></b>
+  <%= " "%> Date:
+<b><%= each_blog.date.strftime("%F") %></b>
+</p>
+<% } %><br>
+<a href="/new_post">Create new post</a>
+</body>

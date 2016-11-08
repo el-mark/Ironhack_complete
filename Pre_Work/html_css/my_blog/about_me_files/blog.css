@@ -1,0 +1,69 @@
+body {
+  background-color: lightgrey;
+  font-family: "Baskerville";
+}
+
+.niceParagraph, span {
+  background-color: grey;
+  font-family: "Baskerville";
+}
+#finalParagraph {
+  background-color: grey;
+  font-family: "Baskerville";
+}
+footer {
+  background-color: #444444;
+  padding: 30px 10px;
+  border-top: 5px solid white;
+  color: white;
+  font-size: 10px;
+  font-style: italic;
+  width: 100%;
+}
+header {
+  background-color: rgb(90, 90,   140);
+  font-family: "serif";
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
+article {
+  font-family: "sans serif";
+}
+table thead {
+	font-weight: bold;
+}
+.divtable {
+	background-color: rgb(167, 178, 255);
+}
+.divtable:hover {
+  background-color: rgb(117, 128, 205);
+}
+.articleContainer {
+	background-color: white;
+  padding: 3px 20px 5px 20px;
+  -webkit-box-shadow:10px 5px 5px #888888;
+  -moz-box-shadow:10px 5px 5px #888888;
+  box-shadow:10px 5px 5px #888888;
+  margin: 20px 20px 20px 20px;
+}
+.thebytag {
+	font-size: 17px;
+	background-color: white;
+}
+.articlepicture{
+  float:left;
+  padding: 3px 20px 5px 20px;
+}
+footer a:link {
+  color: #FFFFFF;
+}
+
+footer a:visited {
+` color: #CCCCCC;
+}
+
+footer a:hover {
+  color: #999999;
+}

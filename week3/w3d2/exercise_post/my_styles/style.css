@@ -1,0 +1,12 @@
+body {
+  background-color: gainsboro;
+}
+article {
+  background-color: white;
+  width: 500px;
+  border-radius: 10px;
+  padding: 5px 5px 20px 20px;
+}
+.comment_box {
+  
+}

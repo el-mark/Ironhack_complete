@@ -1,0 +1,21 @@
+.container {
+  margin: 0 auto;
+}
+.row {
+  margin-lef: -20px;
+}
+[class*="span"] {
+  display:inline;
+  float: left;
+  margin-left: 20px;
+  padding-top: 20px;
+  border-bottom: 2px solid gray;
+}
+@media only screen and (min-width: 768px) {
+  .span-one-third {
+    width: 30%;
+  }
+  .container {
+    width: 768px;
+  }
+}

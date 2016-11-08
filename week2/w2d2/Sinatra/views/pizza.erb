@@ -1,0 +1,14 @@
+<h2>My Pizza</h2>
+<p>These are the ingredients: </p>
+
+<ul>
+<% @ingredients.each do |single_ingredient|  %>
+
+<li>
+
+<%= single_ingredient %>
+
+</li>
+
+<% end %>
+</ul>

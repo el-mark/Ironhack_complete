@@ -1,0 +1,156 @@
+mark@mark-HP-14-Notebook-PC:~/Ironhack$ cd git-practice-v2
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git init
+Initialized empty Git repository in /home/mark/Ironhack/git-practice-v2/.git/
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ touch three_doors.txt
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ gedit three_doors.txt
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git add ..
+fatal: ..: '..' is outside repository
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git add .
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   three_doors.txt
+	new file:   three_doors.txt~
+
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ commit -m "first commit"
+commit: command not found
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git commit -m "first commit"
+[master (root-commit) d83428a] first commit
+ 2 files changed, 1 insertion(+)
+ create mode 100644 three_doors.txt
+ create mode 100644 three_doors.txt~
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ gedit three_doors.txt
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   three_doors.txt
+	modified:   three_doors.txt~
+
+no changes added to commit (use "git add" and/or "git commit -a")
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git commit -a -m "add second sentence to three door txt"
+[master 468d3e8] add second sentence to three door txt
+ 2 files changed, 3 insertions(+)
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git log
+commit 468d3e83ef40c5e81da2b9fc156bb5974c062a9b
+Author: mark harmsen <mharmsenr@gmail.com>
+Date:   Thu Mar 10 10:24:22 2016 -0500
+
+    add second sentence to three door txt
+
+commit d83428a973bd173e4e7badd330764361d9d49fb6
+Author: mark harmsen <mharmsenr@gmail.com>
+Date:   Thu Mar 10 10:22:34 2016 -0500
+
+    first commit
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ gedit three_doors.txt
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git diff
+diff --git a/three_doors.txt b/three_doors.txt
+index 794a7d6..1280940 100644
+--- a/three_doors.txt
++++ b/three_doors.txt
+@@ -1,3 +1,5 @@
+ You are in a room with three doors.
+ 
+ Which door will you go through?
++
++I choose the first door in the right, the one that is big and blue.
+diff --git a/three_doors.txt~ b/three_doors.txt~
+index bf5b067..794a7d6 100644
+--- a/three_doors.txt~
++++ b/three_doors.txt~
+@@ -1 +1,3 @@
+ You are in a room with three doors.
++
++Which door will you go through?
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git add first_choice.txt
+fatal: pathspec 'first_choice.txt' did not match any files
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git add first_choice.txt
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   first_choice.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   three_doors.txt
+	modified:   three_doors.txt~
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	first_choice.txt~
+
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git add first_choice.txt
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   first_choice.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   three_doors.txt
+	modified:   three_doors.txt~
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	first_choice.txt~
+
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git checkout -- three_doors.txt
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   first_choice.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   three_doors.txt~
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	first_choice.txt~
+
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git commit -m "add first choice txt"
+[master 4083a35] add first choice txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 first_choice.txt
+mark@mark-HP-14-Notebook-PC:~/Ironhack/git-practice-v2$ git log
+commit 4083a35fae890d71f35cef309dd08006de9d8de9
+Author: mark harmsen <mharmsenr@gmail.com>
+Date:   Thu Mar 10 11:02:52 2016 -0500
+
+    add first choice txt
+
+commit 468d3e83ef40c5e81da2b9fc156bb5974c062a9b
+Author: mark harmsen <mharmsenr@gmail.com>
+Date:   Thu Mar 10 10:24:22 2016 -0500
+
+    add second sentence to three door txt
+
+commit d83428a973bd173e4e7badd330764361d9d49fb6
+Author: mark harmsen <mharmsenr@gmail.com>
+Date:   Thu Mar 10 10:22:34 2016 -0500
+
+    first commit
+

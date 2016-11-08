@@ -1,0 +1,66 @@
+var isTrue = true;
+var count = 3;
+
+while (isTrue) {
+    console.log(count);
+    if (count === 0) {
+        console.log("Blast off!");
+        isTrue = false;
+    }
+    count--;
+}
+
+----------------------------------------------------------------
+
+var names, returnstring;
+
+names = [ "Canada", "Mexico", "Turkey", "Japan", "Peru", "Chile" ];
+
+// Should print "Canada, Mexico, Turkey and Japan"
+
+function prepare(group){
+    for (i = 0; i < group.length; i = i + 1) {
+        if (i===0){
+            returnstring = group[0];
+        }
+        else if (i===(group.length-1)) {
+            returnstring = returnstring + " and " + group[i];
+        }
+        else {
+            returnstring = returnstring + ", " + group[i];
+        }
+    }
+    return returnstring;
+}
+
+
+console.log(prepare(names));
+
+
+---------------------------------------------------------------
+
+var country;
+
+country = {
+    name: "Uruguay",
+    continent: "South America",
+    capital: "Montevideo",
+    population: 123123123,
+};
+
+var array;
+array = [];
+var objectcountry;
+objectcountry= {};
+
+function objectToArray (objectcountry) {
+    for (var key in objectcountry) {
+    array.push(objectcountry[key]);
+    }
+    return array;
+}
+
+
+// Should print [ "Uruguay", "South America", "Montevideo" ]
+console.log(objectToArray(country));    
+

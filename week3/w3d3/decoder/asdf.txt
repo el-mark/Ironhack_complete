@@ -1,0 +1,13 @@
+// 1
+var animal = {
+  name: "Shadow",
+  noise: "Brrrr",
+
+  shout: function () {
+    console.log("Mooooo!");
+  },
+  makeNoise: function () {
+    // console.log(animal.noise + "!!!!") //Alternative
+    console.log(this.noise + "!!!!")
+  }
+};
